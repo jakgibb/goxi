@@ -1,7 +1,6 @@
 package goxi
 
 import (
-	"crypto/tls"
 	"fmt"
 	"io/ioutil"
 	"net/http"
