@@ -68,7 +68,7 @@ type service []struct {
 	ActionURL                 string `json:"action_url"`
 }
 
-// serviceResponse struct holds the raw response from the API which will be analysed and unmarshaled into the `host` struct
+// serviceResponse struct holds the raw response from the API which will be analysed and unmarshaled into the `service` struct
 type serviceResponse struct {
 	RecordCount int             `json:"recordcount,string"`
 	RawStatus   json.RawMessage `json:"servicestatus"`
@@ -87,7 +87,7 @@ func (r *serviceResponse) unmarshal(jsonResp *[]byte) {
 	}
 }
 
-// unmarshal (host) is a custom unmarshaler to populate the various fields of the struct as held in `hostResponse`
+// unmarshal (service) is a custom unmarshaler to populate the various fields of the struct as held in `serviceResponse`
 func (r *service) unmarshal(resp *serviceResponse) {
 	if resp.RecordCount > 0 {
 		// Bug (#2 of #2) in the Nagios API <=5.6 which returns inconsistent JSON types depending on the number of
