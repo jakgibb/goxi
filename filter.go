@@ -25,6 +25,7 @@ type HostFilter struct {
 	PassiveChecksEnabled []string `param:"passive_checks_enabled"`
 	ActiveChecksEnabled  []string `param:"active_checks_enabled"`
 	FlapDetectionEnabled []string `param:"flap_detection_enabled"`
+	IsFlapping           []string `param:"is_flapping"`
 	Records              string   `param:"records"`
 }
 
@@ -48,6 +49,7 @@ type ServiceFilter struct {
 	ProblemAcknowledged  []string `param:"problem_acknowledged"`
 	PassiveChecksEnabled []string `param:"passive_checks_enabled"`
 	ActiveChecksEnabled  []string `param:"active_checks_enabled"`
+	IsFlapping           []string `param:"is_flapping"`
 	Records              string   `param:"records"`
 }
 
