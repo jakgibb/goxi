@@ -28,17 +28,11 @@ const (
 // apiKey: api key of the user generated from the User Dashboard
 //TODO: allow user to configure a custom client (i.e.: timeout, TLS verification)
 func NewClient(apiURL string, apiKey string) *client {
-	//TODO: remove
-	tr := &http.Transport{
-		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
-	}
-
 	client := client{
 		apiURL: apiURL,
 		apiKey: apiKey,
 		httpClient: &http.Client{
 			Timeout:   10 * time.Second,
-			Transport: tr,
 		},
 	}
 
