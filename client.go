@@ -40,7 +40,7 @@ func NewClient(apiURL string, apiKey string) *client {
 
 // GetHosts crafts the API URL and invokes the `get` method to query the API returning a slice of `service` structs
 // A filter can be defined to only return a specific subset of data; passing in a an empty filter returns all results
-func (c *client) GetHosts(hf filterInterface) (*host, error) {
+func (c *client) GetHosts(hf FilterInterface) (*host, error) {
 
 	url := fmt.Sprintf("%s%s%s%s%s%s%s%s", c.apiURL, apiV1Segment, hostSegment, "?", apiParam, "=", c.apiKey, hf.build())
 
@@ -61,7 +61,7 @@ func (c *client) GetHosts(hf filterInterface) (*host, error) {
 
 // GetServices crafts the API URL and invokes the `get` method to query the API returning a slice of `service` structs
 // A filter can be defined to only return a specific subset of data; passing in a an empty filter returns all results
-func (c *client) GetServices(sf filterInterface) (*service, error) {
+func (c *client) GetServices(sf FilterInterface) (*service, error) {
 
 	url := fmt.Sprintf("%s%s%s%s%s%s%s%s", c.apiURL, apiV1Segment, serviceSegment, "?", apiParam, "=", c.apiKey, sf.build())
 

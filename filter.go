@@ -5,8 +5,8 @@ import (
 	"reflect"
 )
 
-// filterInterface allows for future support of new objects the Nagios API may introduce
-type filterInterface interface {
+// FilterInterface allows for future support of new objects the Nagios API may introduce
+type FilterInterface interface {
 	build() string
 }
 
@@ -62,7 +62,7 @@ func (s ServiceFilter) build() string {
 }
 
 // toParam takes in a filter and returns a string containing the parameters for the URL
-func toParam(f filterInterface) string {
+func toParam(f FilterInterface) string {
 
 	var fs string
 	t := reflect.TypeOf(f)  //type of filter
