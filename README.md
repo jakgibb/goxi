@@ -1,3 +1,6 @@
+[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](https://godoc.org/github.com/jakgibb/goxi) 
+[![Go Report Card](https://goreportcard.com/badge/github.com/jakgibb/goxi)](https://goreportcard.com/badge/github.com/jakgibb/goxi)
+
 Go XI
 =========
 
