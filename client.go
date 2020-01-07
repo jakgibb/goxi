@@ -31,7 +31,7 @@ func NewClient(apiURL string, apiKey string) *client {
 		apiURL: apiURL,
 		apiKey: apiKey,
 		httpClient: &http.Client{
-			Timeout:   10 * time.Second,
+			Timeout: 10 * time.Second,
 		},
 	}
 
