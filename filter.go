@@ -29,7 +29,7 @@ type HostFilter struct {
 	Records              string   `param:"records"`
 }
 
-// Service struct allows filtering of results from the API
+// ServiceFilter struct allows filtering of results from the API
 // A filter can be defined to only return a specific subset of data; an empty filter will return results for all hosts
 type ServiceFilter struct {
 	InstanceID           []string `param:"instance_id"`
